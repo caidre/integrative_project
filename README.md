@@ -1,7 +1,37 @@
 # **Integrative Project: EcoSort**
 
 ## Overview:
+```mermaid
+graph LR
+    subgraph "AWS Cloud" 
+        FE[Dashboard]
+        MB[Mobile App]
+        CB[Chatbot]
+        BE[API Interface]
+        BD[(Database SQL)]
+        SI[Node-RED Gateway]
+       
+    end
 
+    subgraph "Industrial Automation"
+        AC[CLP]
+        TA[OPC-UA Server]
+        HI[IHM]
+    end
+
+    AC --> TA
+    TA --> SI
+
+    SI --> BE
+    BE --> BD
+
+    BD --> BE
+
+    BE --> FE
+    BE --> MB
+    FE --> CB
+    AC <--> HI
+```
 
 ## Contexto:
 
