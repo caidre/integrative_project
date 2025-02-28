@@ -1,17 +1,20 @@
-# Desafio Tecnológico na Indústria de Reciclagem
+# **Integrative Project: EcoSort**
 
-## Contextualização
+## Overview:
+
+
+## Contexto:
 
 A indústria de reciclagem enfrenta desafios significativos relacionados à separação de materiais recicláveis, especialmente entre metais e plásticos. A mistura desses materiais resulta em altos custos, baixa qualidade e redução na produtividade. A falta de automação e um sistema inteligente de monitoramento contribuem para esses problemas, tornando essencial o desenvolvimento de uma solução integrada.
 
-## Descrição do Projeto
+## Descrição:
 
 O objetivo deste projeto é desenvolver uma solução tecnológica para otimizar o processo de separação de materiais recicláveis, com foco em:
 - Aumentar a eficiência operacional.
 - Implementar automação e inteligência no processo de separação.
 - Melhorar a análise de dados para decisões mais estratégicas.
 
-### Fases do Projeto
+## Fases do Projeto:
 
 O projeto será dividido em **duas fases principais**:
 
@@ -24,10 +27,9 @@ O projeto será dividido em **duas fases principais**:
 - **Falta de dados estruturados** para análise e controle eficiente.
 - **Pouco controle sobre a eficiência operacional**, dificultando a gestão e a melhoria contínua.
 
-## Tecnologias Utilizadas
+----
 
-- **Sensores e Automação**: 
-    SCL/ST, OPCUA, Node-RED;
+## Documentação:
 
-- **Plataforma de Análise de Dados**: HTML, CSS & JavaScript, PostgreeSQL, HTTP
-
+1. [Padrões de Commits](docs/commit-patterns.md)  
+2. [Gerenciamento de Branches](/docs/branch-management.md)
