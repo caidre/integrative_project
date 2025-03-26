@@ -59,7 +59,8 @@ O projeto será dividido em **duas fases principais**:
 
 ----
 
-## Documentação:
+## Documentação geral do projeto:
 
 1. [Padrões de Commits](docs/commit-patterns.md)  
 2. [Gerenciamento de Branches](/docs/branch-management.md)
+3. [Repositórios](docs/repositories.md)
