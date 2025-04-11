@@ -1,10 +1,3 @@
-## Tecnologias Utilizadas
-
-- **Sensores e Automação**: 
-    SCL/ST, OPCUA, Node-RED;
-
-- **Plataforma de Análise de Dados**: HTML, CSS & JavaScript, PostgreeSQL, HTTP
-
 # **Ferramentas e Dependências**
 
 ## IDE
