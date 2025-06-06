@@ -6,6 +6,15 @@ materiais recicláveis, aumentando a eficiência do
 processo e aprimorando a análise de dados para 
 tomada de decisões.
 
+![Diagrama do Projeto Integrador](diagrama.png)
+
+## 👀 Colaboradores:
+
+- Gabriel Alvim
+- Gustavo Monteiro
+- Gustavo Souza
+- Kauan Izidoro
+- Rafael Serio
 
 ## 📈 Fluxo Geral do Projeto
 
@@ -31,26 +40,11 @@ tomada de decisões.
 - **Função:** Computação serverless para processar os dados recebidos.
 - **Uso no Projeto:**
   - Processa os dados industriais.
-  - Consulta e grava dados em bancos de dados SQL/NoSQL.
+  - Consulta e grava nos bancos de dados.
   - Interage com o chatbot e dashboards.
 - **Benefício:** Custo baseado em uso, sem necessidade de provisionamento de servidores.
 
----
-
-### 3. **Amazon RDS (Login - SQL)**
-- **Função:** Armazenamento relacional dos dados de login e autenticação.
-- **Uso no Projeto:** Controla acessos ao sistema via Dashboard, Mobile e Chatbot.
-
----
-
-### 4. **Amazon DynamoDB (Metrics - NoSQL)**
-- **Função:** Armazenamento NoSQL escalável e rápido.
-- **Uso no Projeto:** Armazena métricas em tempo real dos sensores (temperatura, pressão, etc).
-- **Benefício:** Alta performance para leitura e escrita rápida.
-
----
-
-### 5. **Amazon CloudWatch**
+### 3. **Amazon CloudWatch**
 - **Função:** Monitoramento e observabilidade.
 - **Uso no Projeto:**
   - Logs das execuções das funções Lambda.
@@ -60,7 +54,7 @@ tomada de decisões.
 
 ---
 
-### 6. **Amazon SNS (Simple Notification Service)**
+### 4. **Amazon SNS (Simple Notification Service)**
 - **Função:** Serviço de envio de notificações.
 - **Uso no Projeto:**
   - Notificação em tempo real em caso de falha, anomalias ou limites excedidos.
@@ -69,8 +63,47 @@ tomada de decisões.
 
 ---
 
-### 7. **IAM (Identity and Access Management)**
+### 5. **IAM (Identity and Access Management)**
 - **Função:** Gerenciamento de acesso seguro aos recursos da AWS.
 - **Uso no Projeto:**
   - Criação de políticas específicas para Lambda, DynamoDB, RDS, etc.
   - Controle de permissões para usuários e serviços.
+---
+
+### 6. **Amazon EC2 (Elastic Compute Cloud)**
+ - **Função**: Computação escalável na nuvem com suporte a Auto Scaling e Load Balancing.
+
+ - **Uso no Projeto**:
+
+    - Prover instâncias que podem ser utilizadas para guardar os dados de login(SQL) e metricas da aplicação (NoSQL).
+
+    - Apoiar o balanceamento de carga e escalar horizontalmente quando o volume de dados ou usuários aumenta se necessário.
+
+ - **Benefício**: Alta disponibilidade, elasticidade automática, e maior controle sobre o ambiente de execução quando necessário.
+
+---
+
+### 7. **Auto Scaling**
+
+ - **Função**: Ajuste automático da capacidade computacional com base na demanda.
+
+ - **Uso no Projeto**:
+
+   - Permite que instâncias do Amazon EC2 sejam adicionadas ou removidas automaticamente conforme a necessidade.
+
+   - Garante que o sistema continue performático mesmo em momentos de alto tráfego ou carga de trabalho intensa.
+
+ - **Benefício**: Otimiza custos com recursos sob demanda e melhora a resiliência da aplicação, evitando gargalos.
+
+ ---
+
+### 8. **Elastic Load Balancing (ELB)**
+ - **Função**: Distribuir automaticamente o tráfego de entrada entre várias instâncias do Amazon EC2.
+
+ - **Uso no Projeto**:
+
+    - Trabalha em conjunto com o Auto Scaling para manter a distribuição de carga equilibrada entre as instâncias.
+
+    - Ajuda a aumentar a tolerância a falhas, direcionando o tráfego apenas para instâncias saudáveis.
+
+ - **Benefício**: Alta disponibilidade, escalabilidade e melhor desempenho da aplicação.
